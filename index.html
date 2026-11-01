@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Accesorios Deportivos</title>
+    <style>
+        /* Estilos Generales y Colores del Negocio */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Título Grande del Negocio */
+        .titulo-negocio {
+            text-align: center;
+            font-size: 3.5rem;
+            color: #1e3a8a; /* Azul deportivo profundo */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #ef4444; /* Línea de acento roja */
+            padding-bottom: 15px;
+        }
+
+        /* Párrafo de Información */
+        .info-negocio {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: justify;
+            color: #4b5563;
+            margin: 25px 0;
+        }
+
+        /* Contenedor de Imágenes */
+        .galeria-articulos {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .galeria-articulos img {
+            width: 48%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        /* Efecto sutil al pasar el mouse por las fotos */
+        .galeria-articulos img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Subtítulos de Secciones */
+        .subtitulo {
+            font-size: 1.8rem;
+            color: #1e3a8a;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Tabla de Movimiento Específica */
+        .tabla-inventario {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 1rem;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .tabla-inventario th {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            text-align: left;
+            padding: 14px 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .tabla-inventario td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        /* Colores alternos para las filas */
+        .tabla-inventario tbody tr:nth-of-type(even) {
+            background-color: #f9fafb;
+        }
+
+        /* TABLA DE MOVIMIENTO: Efecto Hover dinámico con cambio de color */
+        .tabla-inventario tbody tr {
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .tabla-inventario tbody tr:hover {
+            background-color: #fee2e2 !important; /* Fondo rojo suave al pasar el cursor */
+            color: #b91c1c; /* Texto rojo oscuro */
+            transform: translateX(5px); /* Movimiento ligero hacia la derecha */
+        }
+
+        /* Etiquetas de Color en la tabla */
+        .badge-color {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        }
+        .color-negro { background-color: #111827; }
+        .color-rojo { background-color: #ef4444; }
+        .color-azul { background-color: #3b82f6; }
+        .color-verde { background-color: #10b981; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Título Grande que especifica el negocio -->
+        <h1 class="titulo-negocio">¡ACCESORIOS "ROMAN"!</h1>
+
+        <!-- Párrafo de Información del Negocio -->
+        <p class="info-negocio">
+            Bienvenidos a <strong>ACCESORIOS "ROMAN"</strong>, tu aliado estratégico para alcanzar el máximo rendimiento físico. Nos especializamos en la distribución de accesorios deportivos de alta resistencia, diseñados tanto para atletas de élite como para entusiastas del fitness. Nuestro compromiso es ofrecerte equipamiento ergonómico, tecnológico y con los más altos estándares de calidad del mercado. ¡Explora nuestro catálogo dinámico a continuación y equípate para ganar!
+        </p>
+
+        <!-- Dos imágenes colocadas después del párrafo informativo -->
+        <div class="galeria-articulos">
+            <!-- Nota: Reemplaza las URLs de Unsplash por las rutas de tus propias imágenes si lo deseas -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk2_AFOguq3jIM5f-x4xznKApgzW98c_hCIpDT3Pe2Jg&s=10" alt="valones de futbol">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQirmKRgRIX_OJ9BeSHTAEiqedM8Xs3KAryZZBiKHg6KQ&s=10" alt="Ropa y accesorios para correr">
+        </div>
+
+        <!-- Tabla de Movimiento y Control de Stock -->
+        <h2 class="subtitulo">Movimientos de Inventario y Disponibilidad</h2>
+        
+        <table class="tabla-inventario">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Accesorio Deportivo</th>
+                    <th>Categoría</th>
+                    <th>Color Disponible</th>
+                    <th>Precio Unitario</th>
+                    <th>Stock Activo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#ACC-1024</td>
+                    <td>balones</td>
+                    <td>inflables</td>
+                    <td><span class="badge-color color-verde">verde</span></td>
+                    <td>Q175.00</td>
+                    <td>50 uds</td>
+                </tr>
+                <tr>
+                    <td>#ACC-3081</td>
+                    <td>guantes de portero</td>
+                    <td>ports</td>
+                    <td><span class="badge-color color-rojo">Rojo</span></td>
+                    <td>Q250.00</td>
+                    <td>25 uds</td>
+                </tr>
+                <tr>
+                    <td>#ACC-7742</td>
+                    <td>zapatos adidas </td>
+                    <td>calzado</td>
+                    <td><span class="badge-color color-negro">negro</span></td>
+                    <td>Q450.00</td>
+                    <td>18 uds</td>
+                </tr>
+                <tr>
+                    <td>#ACC-0915</td>
+                    <td>medias recortadas</td>
+                    <td>complementos</td>
+                    <td><span class="badge-color color-blanco">blanco</span></td>
+                    <td>Q20.00</td>
+                    <td>75 uds</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
